@@ -54,8 +54,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('na0811@srmist.edu.in', 'Cherry@861')
-    server.sendmail('aa6986@srmist.edu.in', to, content)
+    server.login(''#email, ''#password)
+    server.sendmail('', to, content) #email
     server.close()
 
 if __name__ == "__main__":
@@ -91,14 +91,14 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:/Users/Lenovo/Desktop/CodeFiles/JERRY.py"
+            codePath = #ENter file Path
             os.startfile(codePath)
 
         elif 'email to Ansh' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "aa6986@srmist.edu.in"    
+                to = "" #enter recipient mailid   
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
